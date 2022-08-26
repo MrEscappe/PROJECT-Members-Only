@@ -21,10 +21,14 @@
     <%= form.text_area :body %>
   </div>
 
-  <div>
+  <%
+=begin%>
+ <div>
     <%= form.label :user_id, style: "display: block" %>
     <%= form.text_field :user_id %>
-  </div>
+  </div> 
+<%
+=end%>
 
   <div>
     <%= form.submit %>
