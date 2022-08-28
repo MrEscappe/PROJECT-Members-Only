@@ -1,24 +1,11 @@
-# README
+## Project: Members Only!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The goal of this project is to build a simply site where you can write anonymous posts, the users can see who wrote it but if you not log in is impossible to know.
 
-Things you may want to cover:
+## Chalengins
 
-* Ruby version
+The big chalengin of this project was to implement the log in, sign up method with turbo and devise together, and after some time recreating the site I started to understand and making everything work.
 
-* System dependencies
+## Resources
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[Setup ruby on rails 7 with turbo and devise](https://betterprogramming.pub/devise-auth-setup-in-rails-7-44240aaed4be)
