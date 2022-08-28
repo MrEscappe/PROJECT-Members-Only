@@ -1,0 +1,32 @@
+<nav class="navbar sticky-top navbar-expand-lg">
+  <div class="container container-fluid">
+    <%= link_to "Members Only", root_path, class: "navbar-brand" %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="d-flex navbar-nav align-items-center justify-content-between">
+        <li class="nav-item">
+          <%= link_to "Home", root_path, class: "nav-link active" %>
+        </li>
+        <li class="nav-item">
+        <%= link_to "New post", new_post_path, class: "nav-link active" %>
+        </li>
+        <%if user_signed_in?%>
+        <li class="nav-item">
+          <%= button_to("Log Out", destroy_user_session_path, class: "btn btn-link nav-link active" ,method: :delete) %>
+        </li>
+          <%else%>
+        <li class="nav-item">
+          <%= link_to "Log in", new_user_session_path, class: "nav-link active"  %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Sign up", new_user_registration_path, class: "nav-link active"  %>
+        </li>
+        <% end %> 
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
