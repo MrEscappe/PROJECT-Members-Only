@@ -1,0 +1,32 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Posts</h1>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <% @posts.each do |post| %>
+      <div id="posts" class="">
+        <div id="<%= dom_id post %>" class="card border-dark">
+          <div class="card-body">
+            
+              <h5 class="card-title"><%= post.title %></h5> 
+              
+              <h6 class="card-subtitle mb-2 text-muted">User:
+              <%if user_signed_in? %>
+              <%= post.user.username %>
+              <%else%>
+                Anon
+              <%end%>
+              </h6>
+              <strong>Post:</strong>
+              <p class="card-text text-truncate"><%= post.body %></p>
+
+              <p>
+                <%= link_to "Show this post", post %>
+              </p>
+            
+          </div>
+        </div>
+      </div>
+    <% end %>
+    </div>
+</div>

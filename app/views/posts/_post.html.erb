@@ -1,0 +1,14 @@
+<div id="<%= dom_id post %>" class="">
+  <div class="">    
+      <h5 class=""><%= post.title %></h5>       
+      <h6 class="card-subtitle mb-2 text-muted">User:
+      <%if user_signed_in? %>
+      <%= post.user.username %>
+      <%else%>
+        Anon
+      <%end%>
+      </h6>
+      <strong>Post:</strong>
+      <p class=""><%= post.body %></p>    
+  </div>
+</div>
